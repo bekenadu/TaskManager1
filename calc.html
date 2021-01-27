@@ -3,39 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Materialize Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Font Owesome Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!-- Custom Css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/calc.css">
     
     <link rel="shortcut icon" type="image/svg" href="assets/img/tasks-solid.svg" />
     <title>Calc</title>
 </head>
 <body>
-    <div class="cal" id="div1">
-        <label id="lable1" for="firstNum">enter num1</label><br>
-        <input type="text" id="firstNum" name="firstNum">
-        <label id="lable2">enter num2</label>    
-        <input type="text" id="secondNum">
-
-        <button id="add" value="+">+</button>
-        <button id="sub" value="-">-</button>
-        <button id="mult" value="*">*</button>
-        <button id="div" value="/">/</button><br>
+    <div class="calculator-grid">
+        <div class="output">
+            <div class="result"></div>
+            <div class="input2"></div>
+           <div class="operand">5555</div>
+            <div class="input"></div>
+        </div>
+        
+            <button class="ac">Ac</button>
+            <button value="%" class="percent">%</button>
+            <button value="/" class="div">/</button>
+            <button value="1" class="one">1</button>
+            <button value="2" class="two">2</button>
+            <button value="3" class="three">3</button>
+            <button value="*" class="mult">*</button>
+            <button value="4" class="four">4</button>
+            <button value="5" class="five">5</button>
+            <button value="6" class="six"> 6</button>
+            <button value="+" class="add">+</button>
+            <button value="7" class="seven">7</button>
+            <button value="8" class="eight">8</button>
+            <button value="9" class="nine">9</button>
+            <button value="-" class="minus">-</button>
+            <button value="0" class="zero">0</button>
+            <button class="equal">=</button>
     
-        <label id="result1">Result</label><br>
-        <input id="result" type="text"> 
+    
+
     </div>
-    
-
-    <!-- Jquery Compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous"></script>
-    <!-- Materialize Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
     <!-- Our bom Js  -->
     <script src="assets/js/calc.js"></script>
