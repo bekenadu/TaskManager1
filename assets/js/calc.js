@@ -61,7 +61,7 @@ function div(e) {
     }
 }
 function on(e){
-    if (x=== null){
+    if (x === null){
     x.textContent = 1;}
     else{
         y.textContent = 1;
@@ -73,15 +73,15 @@ function tw(e) {
 
 }
 function thr(e) {
-    x.textContent = 3;
+    y.textContent = 3;
 
 }
 function fur(e) {
-    x.textContent = 4;
+    y.textContent = 4;
 
 }
 function fve(e) {
-    x.textContent = 5;
+    y.textContent = 5;
 
 }
 function sx(e) {
@@ -104,7 +104,7 @@ function nin(e) {
     
 }
 function prc(e) {
-    x.textContent = "%";
+    oper.textContent = "%";
 
 }
 
@@ -121,19 +121,26 @@ function di(e){
     oper.textContent = "/" ;
 }
 function equal(e){
-    if (oper == "+"){
+    if (oper === "+"){
         const a = parseInt(x.value) + parseInt(y.value);
         res.textContent = a;
-       additon();
+       // additon();
     }
-    else if (oper==="-"){
-        Minus();
+    else if (oper === "-"){
+        const m = parseInt(x.value) - parseInt(y.value);
+        res.textContent = m;
+       // Minus();
     }
     else if (oper === "*"){
-        mult();     
+        const k = parseInt(x.value) * parseInt(y.value);
+        res.textContent = k;
+        //  mult();     
     }
-    else if  (oper ==="/"){
-        div();
+    else if  (oper === "/"){
+        const d = parseFloat(x.value) / parseFloat(y.value);
+        res.textContent = d;
+     
+        //  div();
     }
 
 }

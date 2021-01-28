@@ -13,12 +13,10 @@ body{
     grid-template-columns: repeat(4,100px);
     grid-template-rows: minmax(120px,auto) repeat(4,100px);
 }
-.button{
+.calculator-grid > button {
     border: 1px solid black;
     font-size: 2rem;
     background-color:cadetblue;
-    height: 120px;
-    width: 200px;
 }
 .output{
     grid-column: 1 /-1;
