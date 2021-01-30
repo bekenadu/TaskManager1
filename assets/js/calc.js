@@ -7,6 +7,7 @@ const multButton = document.querySelector ('.mult');
 const divButton = document.querySelector('.div');
 const res = document.querySelector('.result');
 const eq =document.querySelector('.equal');
+const a= document.querySelector('.ac');
 
 //numebers
 const onee = document.querySelector('.one');
@@ -22,7 +23,7 @@ const zeroo = document.querySelector('.zero');
 const percentt = document.querySelector('.percent');
 
 // calling
-eq.addEventListener('click',equal);
+eq.addEventListener('click', equal);
 minusButton.addEventListener('click', su);
 plusButton.addEventListener('click', ad);
 multButton.addEventListener('click', mu);
@@ -38,22 +39,23 @@ eightt.addEventListener('click',eght);
 ninee.addEventListener('click',nin);
 zeroo.addEventListener('click',zr);
 percentt.addEventListener('click',prc);
+a.addEventListener('click',Ac);
 // functions
 function additon(e) {
-    const a = parseInt(x.value) + parseInt(y.value);
+    const a = parseInt(x.textContent) + parseInt(y.textContent);
     res.textContent = a;
 }
 function Minus(e) {
-    const m = parseInt(x.value) - parseInt(y.value);
+    const m = parseInt(x.textContent) - parseInt(y.textContent);
     res.textContent = m;
 }
 function mult(e) {
-    const k = parseInt(x.value) * parseInt(y.value);
+    const k = parseInt(x.textContent) * parseInt(y.textContent);
     res.textContent = k;
 }
 function div(e) {
-    if (parseInt(y.value) > 0) {
-        const d = parseFloat(x.value) / parseFloat(y.value);
+    if (parseInt(y.textContent) > 0) {
+        const d = parseFloat(x.textContent) / parseFloat(y.textContent);
         res.textContent = d;
     }
     else {
@@ -61,46 +63,82 @@ function div(e) {
     }
 }
 function on(e){
-    if (x === null){
-    x.textContent = 1;}
-    else{
+    if (x.textContent == "") {
+        x.textContent = 1;
+    } else if (y.textContent == "") {
         y.textContent = 1;
     }
 
 }
 function tw(e) {
-    y.textContent = 2;
+    if (x.textContent == "") {
+        x.textContent = 2;
+    } else if (y.textContent == "") {
+        y.textContent = 2;
+    };
 
 }
 function thr(e) {
-    y.textContent = 3;
+    if (x.textContent == "") {
+        x.textContent = 3;
+    } else if (y.textContent == "") {
+        y.textContent = 3;
+    };
 
 }
 function fur(e) {
-    y.textContent = 4;
+    if (x.textContent == "") {
+        x.textContent = 4;
+    } else if (y.textContent == "") {
+        y.textContent = 4;
+    };
 
 }
 function fve(e) {
-    y.textContent = 5;
+    if (x.textContent == "") {
+        x.textContent = 5;
+    } else if (y.textContent == "") {
+        y.textContent = 5;
+    };
 
 }
 function sx(e) {
-    x.textContent = 6;
+    if (x.textContent == "") {
+        x.textContent = 6;
+    } else if (y.textContent == "") {
+        y.textContent = 6;
+    }
 
 }
 function svn(e) {
-    x.textContent = 7;
+    if (x.textContent == "") {
+        x.textContent = 7;
+    } else if (y.textContent == "") {
+        y.textContent = 7;
+    }
 
 }
 function eght(e) {
-    x.textContent = 8;
+    if (x.textContent == "") {
+        x.textContent = 8;
+    } else if (y.textContent == "") {
+        y.textContent = 8;
+    }
 
 }
 function nin(e) {
-    x.textContent = 9;
+    if (x.textContent == "") {
+        x.textContent = 9;
+    } else if (y.textContent == "") {
+        y.textContent = 9;
+    };
 
 }function zr(e){
-    x.textContent = 0;
+    if (x.textContent == "") {
+        x.textContent = 0;
+    } else if (y.textContent == "") {
+        y.textContent = 0;
+    }
     
 }
 function prc(e) {
@@ -121,26 +159,35 @@ function di(e){
     oper.textContent = "/" ;
 }
 function equal(e){
-    if (oper === "+"){
-        const a = parseInt(x.value) + parseInt(y.value);
-        res.textContent = a;
-       // additon();
+    if (oper.textContent === "+"){
+        additon();
+        x.textContent = "";
+        y.textContent = "";
+        oper.textContent = "";
     }
-    else if (oper === "-"){
-        const m = parseInt(x.value) - parseInt(y.value);
-        res.textContent = m;
-       // Minus();
+    else if (oper.textContent === "-"){
+         Minus();
+        x.textContent = "";
+        y.textContent = "";
+        oper.textContent = "";
     }
-    else if (oper === "*"){
-        const k = parseInt(x.value) * parseInt(y.value);
-        res.textContent = k;
-        //  mult();     
+    else if (oper.textContent === "*"){
+        mult();
+        x.textContent = "";
+        y.textContent = "";
+        oper.textContent = "";     
     }
-    else if  (oper === "/"){
-        const d = parseFloat(x.value) / parseFloat(y.value);
-        res.textContent = d;
-     
-        //  div();
+    else if  (oper.textContent === "/"){
+        div();
+        x.textContent = "";
+        y.textContent = "";
+        oper.textContent = "";
     }
 
+}
+function Ac(e){
+    x.textContent = "";
+    y.textContent = "";
+    oper.textContent = "";
+    res.textContent = "";
 }
